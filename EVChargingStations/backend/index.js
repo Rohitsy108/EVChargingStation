@@ -23,8 +23,8 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 5000;
 
 const createAdminUser = async () => {
-  const adminUsername = "rohit@gmail.com";
-  const adminPassword = "123456";
+  const adminUsername = "";
+  const adminPassword = "";
   const adminExists = await User.findOne({ username: adminUsername });
   if (!adminExists) {
     const hashedPassword = await bcrypt.hash(adminPassword, 10);
